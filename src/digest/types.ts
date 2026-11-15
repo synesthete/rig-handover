@@ -27,6 +27,8 @@ export type DigestRow = {
   runs: number;
   /** Number of good lines for this job with status `retry`. */
   retries: number;
+  /** Number of good lines for this job with status `fail`. ok lines = runs − retries − fails. */
+  fails: number;
   /** Status of the job's last line. */
   lastStatus: RunStatus;
   /**
